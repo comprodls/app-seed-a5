@@ -1,0 +1,28 @@
+<div class="container d-flex justify-content-center mt-5 pt-5">
+    <div class="form-container justify-content-center p-5">
+        <form #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)">
+            <h3 class="center">Enter you credentials</h3>
+            <div class="form-group d-flex flex-column">
+                <label class="mt-3" for="email">Email</label>
+                <input required ngModel email name="email" type="email" #email="ngModel" class="form-control" id="email">
+                <div class="errors" *ngIf="email.touched && !email.valid">
+                    <div *ngIf="email.errors && email.errors.required">Email is required.</div>
+                    <div *ngIf="email.errors && email.errors.email">Enter a valid email</div>
+                </div>
+            </div>
+            <div class="form-group d-flex flex-column">
+                <label class="mt-3" for="password">Password</label>
+                <input required ngModel name="password" type="password" #password="ngModel" class="form-control" id="password">
+                <div class="errors" *ngIf="password.touched && !password.valid">
+                    <div *ngIf="password.errors && password.errors.required">Password is required.</div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit" [class.disabled]="!loginForm.valid">Login
+                <div *ngIf="showLoginLoader" class="spinner-border spinner-border-sm ms-1" role="status">
+                    <span class="visually-hidden">Processing...</span>
+                </div>
+            </button>
+            <div class="errors invalid-cred center" *ngIf="invalidCred">Invalid Credentials.</div>
+        </form>
+    </div>
+</div>

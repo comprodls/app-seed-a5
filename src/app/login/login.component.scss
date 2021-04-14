@@ -1,0 +1,30 @@
+.container {
+    flex: 1;
+    .form-container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        input {
+            width: 300px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 28px;
+        }
+        .errors {
+            color: #dd4b39;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .invalid-cred {
+            padding-top: 20px;
+        }
+    }
+}
