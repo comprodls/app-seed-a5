@@ -5,13 +5,13 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Dashboard } from './dashboard/dashboard.component';
-import { UserService } from './user.service';
+import { Dashboard } from './components/dashboard/dashboard.component';
+import { UserService } from './services/user.service';
 import * as Sentry from "@sentry/angular";
-import { Login } from './login/login.component';
-import { ImageThumbnailUpdateDirective } from './image-thumbnail-update.directive';
-import { AuthenticatedRoutesGuard } from './authenticated-routes-guard.service';
-import { UnAuthenticatedRoutesGuard } from './unauthenticated-routes-guard.service';
+import { Login } from './components/login/login.component';
+import { ImageThumbnailUpdateDirective } from './directives/image-thumbnail-update.directive';
+import { AuthenticatedRoutesGuard } from './services/authenticated-routes-guard.service';
+import { UnAuthenticatedRoutesGuard } from './services/unauthenticated-routes-guard.service';
 declare const SENTRY_DSN: string;
 
 Sentry.init({

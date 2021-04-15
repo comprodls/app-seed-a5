@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Dashboard } from './dashboard/dashboard.component';
-import { Login } from './login/login.component';
-import { AuthenticatedRoutesGuard } from './authenticated-routes-guard.service';
-import { UnAuthenticatedRoutesGuard } from './unauthenticated-routes-guard.service';
+import { Dashboard } from './components/dashboard/dashboard.component';
+import { Login } from './components/login/login.component';
+import { AuthenticatedRoutesGuard } from './services/authenticated-routes-guard.service';
+import { UnAuthenticatedRoutesGuard } from './services/unauthenticated-routes-guard.service';
 
 const routes: Routes = [
   { path: 'dashboard', canActivate: [AuthenticatedRoutesGuard], component: Dashboard },

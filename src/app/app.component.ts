@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 import { filter } from "rxjs/internal/operators";
-import { UserService } from './user.service';
+import { UserService } from './services/user.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

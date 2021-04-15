@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { LoginForm } from './login/login.interface';
+import { LoginForm } from '../components/login/login.interface';
 import { map } from 'rxjs/internal/operators';
 
 @Injectable({
