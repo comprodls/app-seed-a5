@@ -10,6 +10,8 @@ import { UserService } from './user.service';
 import * as Sentry from "@sentry/angular";
 import { Login } from './login/login.component';
 import { ImageThumbnailUpdateDirective } from './image-thumbnail-update.directive';
+import { AuthenticatedRoutesGuard } from './authenticated-routes-guard.service';
+import { UnAuthenticatedRoutesGuard } from './unauthenticated-routes-guard.service';
 declare const SENTRY_DSN: string;
 
 Sentry.init({
@@ -34,6 +36,8 @@ Sentry.init({
   ],
   providers: [
     UserService,
+    AuthenticatedRoutesGuard,
+    UnAuthenticatedRoutesGuard,
     {
       provide: ErrorHandler,
       useValue: Sentry.createErrorHandler({})

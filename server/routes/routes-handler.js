@@ -38,6 +38,7 @@ module.exports = function (app) {
      * Unauthenticated Routes
      ****************************/
     app.post('/apigateway/login',  authController.login);
+    app.get('/apigateway/isUserAuthenticated',  authController.isUserAuthenticated);
     /****************************
      * Authenticated Routes
      ****************************/
