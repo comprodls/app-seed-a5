@@ -8,7 +8,7 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'DLS App seed';
+  title = 'ComproDLS Appseed';
   loggedIn : boolean = false
   showLogoutLoader : boolean = false
   constructor(private router: Router, private userService : UserService) {

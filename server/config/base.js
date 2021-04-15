@@ -35,17 +35,16 @@ const config = {
         "browserCacheMaxAge": 31536000000,
 
         "staticAssets": {
-            "serveStaticAssetsExternally": process.env.STATIC_ASSETS_SERVE_EXTERNALLY ? ((process.env.STATIC_ASSETS_SERVE_EXTERNALLY == "ENABLE") ? true : false) : true,
-            "isVersioningRequired": true,
             "region": process.env.AWS_REGION,
             "bucket": process.env.STATIC_ASSETS_AWS_BUCKET,
             "assetsBasePath": process.env.STATIC_ASSETS_BASEPATH,
             "accessKeyId": process.env.STATIC_ASSETS_ACCESS_KEY_ID,
             "secretAccessKey": process.env.STATIC_ASSETS_SECRET_ACCESS_KEY,
-            "assetsAppFolder": process.env.STATIC_ASSETS_APP_FOLDER
+            "assetsAppFolder": process.env.STATIC_ASSETS_APP_FOLDER || 'comprodls-appseed'
         },
         "sentry": {
             "uploadStaticAssets": true, // Upload source maps to sentry via sentry webpack plugin
+            "dsn": process.env.SENTRY_DSN,
         },
         "session": {
             // Secret for encrypting session cookie
@@ -62,8 +61,6 @@ const config = {
                 "password": process.env.REDIS_PASSWORD
             }
         },
-        "sentryDSN": process.env.SENTRY_DSN,
-        "hideJSErrors": process.env.HIDE_JS_ERRORS ? ((process.env.HIDE_JS_ERRORS == "ENABLE") ? true : false) : true,
         "appEnv": process.env.APP_ENVIRONMENT,
         "dlsAccountId" : process.env.DLS_ACCOUNT_ID, 
         "dlsRealm" : process.env.DLS_REALM,

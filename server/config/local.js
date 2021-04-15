@@ -28,13 +28,12 @@ const config = require('./base');
 
 config.app.redirectToHttps = false;
 config.app.enableBrowserCache = false;
-config.app.staticAssets.serveStaticAssetsExternally = false;
 config.app.sentry.uploadStaticAssets = false;
 config.app.appEnv = 'local';
 config.app.dlsAccountId = 'cup1';
 config.app.dlsEnv = 'thor';
 config.app.dlsRealm = 'asgard';
-config.app.sentryDSN = 'https://951f63c0e5774a4a8097c4941758509d@o559419.ingest.sentry.io/5694154';
+config.app.sentry.dsn = 'https://a93e9bc5d8dd49299293578e2a634929@o99914.ingest.sentry.io/5720763';
 config.app.expressPort = 3000;
 config.app.session.redis.host = 'redis-12909.c246.us-east-1-4.ec2.cloud.redislabs.com';
 config.app.session.redis.port = '12909';

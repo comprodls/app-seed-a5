@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/dls-app-seed'),
+      dir: require('path').join(__dirname, './coverage/comprodls-appseed'),
       subdir: '.',
       reporters: [
         { type: 'html' },

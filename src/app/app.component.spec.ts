@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'dls-app-seed'`, () => {
+  it(`should have as title 'comprodls-appseed'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('dls-app-seed');
+    expect(app.title).toEqual('comprodls-appseed');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('dls-app-seed app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('comprodls-appseed app is running!');
   });
 });
