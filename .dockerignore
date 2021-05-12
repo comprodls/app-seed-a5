@@ -1,0 +1,4 @@
+## Following files will be not be packaged in Docker Image
+.git
+node_modules
+npm-debug
